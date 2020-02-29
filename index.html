@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>National Park Trivia</title>
+    <title>National Parks Trivia</title>
 </head>
 <body>
-<h1>National Park Trivia</h1>
+<h1>National Parks Trivia</h1>
+<p id="rules">You have 2 minutes to answer 10 multiple-choice questions about the National Parks.<br>
+    Press Start to begin.
+</p>
+<button id="start">Start</button>
+<div id="game">
 <h3 id="timer">Time Remaining: 120 Seconds</h3>
 <p>What was the first national park?</p>
     <form action="assets/javascript/app.js" method="post">
@@ -16,6 +21,7 @@
         <input type="radio" name="answer" value="YellowStone">Yellow Stone</input>
         <input type="radio" name="answer" value="Yosemite">Yosemite</input>
     </form>
+    <br>
 <p>Which state contains more national parks?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="California">California</input>
@@ -23,6 +29,7 @@
         <input type="radio" name="answer" value="NewMexico">New Mexico</input>
         <input type="radio" name="answer" value="Utah">Utah</input>
     </form>
+    <br>
 <p>Which national park has the most visitors per year?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="SmokyMtns">Great Smoky Mountains</input>
@@ -30,6 +37,7 @@
         <input type="radio" name="answer" value="RockyMtn">Rocky Mountain</input>
         <input type="radio" name="answer" value="Zion">Zion</input>
     </form>
+    <br>
 <p>Half Dome belongs to which of these national parks?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="Acadia">Acadia</input>
@@ -37,6 +45,7 @@
         <input type="radio" name="answer" value="Glacier">Glacier</input>
         <input type="radio" name="answer" value="Yosemite">Yosemite</input>
     </form>
+    <br>
 <p>The United States contains how many national parks?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="57">57</input>
@@ -44,14 +53,15 @@
         <input type="radio" name="answer" value="71">71</input>
         <input type="radio" name="answer" value="83">83</input>
     </form>
+    <br>
 <p>Which national park is the largest in acres?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="DeathValley">Death Valley</input>
         <input type="radio" name="answer" value="Katmai">Katmai</input>
         <input type="radio" name="answer" value="Elias">Wrangell-St. Elias</input>
         <input type="radio" name="answer" value="YellowStone">Yellow Stone</input>
-        
     </form>
+    <br>
 <p>Which national park is shared by the United States and Canada?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="Acadia">Acadia</input>
@@ -59,6 +69,7 @@
         <input type="radio" name="answer" value="Olympic">Olympic</input>
         <input type="radio" name="answer" value="Voyageurs">Voyageurs</input>
     </form>
+    <br>
 <p>Which president played a major role in establishing our national parks?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="Lincoln">Abraham Lincoln</input>
@@ -66,6 +77,7 @@
         <input type="radio" name="answer" value="JFK">John F. Kennedy</input>
         <input type="radio" name="answer" value="Teddy">Theodore Roosevelt</input>
     </form>
+    <br>
 <p>What year was the National Park Service founded?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="1888">1888</input>
@@ -73,6 +85,7 @@
         <input type="radio" name="answer" value="1910">1910</input>
         <input type="radio" name="answer" value="1916">1916</input>
     </form>
+    <br>
 <p>Which organization managed the parks before the National Park Service?</p>
     <form action="assets/javascript/app.js" method="post">
         <input type="radio" name="answer" value="Army">Army</input>
@@ -80,7 +93,9 @@
         <input type="radio" name="answer" value="ForestService">Forest Service</input>
         <input type="radio" name="answer" value="None">None</input>
     </form>
-<button>Done</button>
+    <br>
+<button id="done">Done</button>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
