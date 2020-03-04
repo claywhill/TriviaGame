@@ -1,11 +1,13 @@
 // variable that holds starting number of seconds
-var timer = 5;
+var timer = 120;
 
 // variable that holds number of correct answers
 var correct = 0;
 
 // variable that holds number of incorrect answers
 var incorrect = 0;
+
+var timeOut;
 
 // varialbe that holds number of unanswered questions
 var unanswered = 0;
@@ -23,48 +25,59 @@ $("#start").click(function() {
     $("#stats").hide();
     $("#game").show();
     // function that starts the countdown
-    setInterval(function() {
+    timeOut = setInterval(function() {
         timer--;
-        // conditional that checks if the timer is not 0, then keep contiue countdown
+        // conditional that checks if the timer is greater than 0, then contiue countdown
         if(timer > 0) {
             $("#timer").text("Time Remaining: " + timer + " Seconds");
         }
         // once timer is 0, the ID 'game' will hide and the ID 'stats' will appear and the 'check' function will run
         else {
+            clearInterval(timeOut);
             check();
             $("#game").hide();
             $("#stats").show();
             }       
-    }, 1000); 
+    }, 1000);
 });
 
 // if the button 'Done' is clicked, then the ID 'game' will hide and ID 'stats' will appear and the 'check' function will run
 $("#done").click(function() {
+    clearInterval(timeOut);
     check();
     $("#game").hide();
     $("#stats").show();
 });
 
-// $("#restart").click(function() {
-//     timer = 0;
-//     $("#stats").hide();
-//     $("#game").show();
-//     setInterval(function() {
-//         timer--;
-//         if(timer > 0) {
-//             $("#timer").text("Time Remaining: " + timer + " Seconds");
-//         }
-        
-//         else {
-//             $("#game").hide();
-//             $("#stats").show();
-//             }       
-//     }, 1000);
-// });
+// if the 'Play Again!' button is clicked, then the questions will be reset, the ID 'stats' will hide, the game will show, and the timer should restart
+$("#restart").click(function() {
+    timer = 121;
+    $("#quiz").trigger("reset");
+    $("#stats").hide();
+    correct = 0;
+    incorrect = 0;
+    unanswered = 0;
+    $("#game").show();
+    timeOut = setInterval(function() {
+        timer--;
+        // conditional that checks if the timer is greater than 0, then contiue countdown
+        if(timer > 0) {
+            $("#timer").text("Time Remaining: " + timer + " Seconds");
+        }
+        // once timer is 0, the ID 'game' will hide and the ID 'stats' will appear and the 'check' function will run
+        else {
+            clearInterval(timeOut);
+            check();
+            $("#game").hide();
+            $("#stats").show();
+            }       
+    }, 1000);
+
+});
 
 // function that checks if the value of a question is true, then increase 'correct'
 // if the value of a question is empty, then increase 'unanswered'
-// if either of those are not the case, then increase 'incorrect'
+// if either of those are false, then increase 'incorrect'
 function check() {
 
 var question1 = document.quiz.question1.value;
