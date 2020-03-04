@@ -51,7 +51,8 @@ $("#done").click(function() {
 
 // if the 'Play Again!' button is clicked, then the questions will be reset, the ID 'stats' will hide, the game will show, and the timer should restart
 $("#restart").click(function() {
-    timer = 121;
+    timer = 120;
+    $("#timer").text("Time Remaining: " + timer + " Seconds");
     $("#quiz").trigger("reset");
     $("#stats").hide();
     correct = 0;
