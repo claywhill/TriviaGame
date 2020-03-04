@@ -17,17 +17,15 @@ p {
 }
 #content {
     background-color: rgb(169, 238, 169);
-    margin: 0px 610px;
+    margin: 0px 400px;
     padding: 10px 0px 15px 0px;
     border-radius: 50px;
     text-align: center;
-    z-index: 2;
 }
 
 .sequoia {
     height: 100%;
     width: 100%;
-    z-index: 1;
 }
 
 .nps {
@@ -49,14 +47,14 @@ button {
 
 ::-webkit-scrollbar {
     width: 20px;
-  }
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
-  }
+}
    
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background:  #4CAF50; 
     border-radius: 10px;
-  }
+}
