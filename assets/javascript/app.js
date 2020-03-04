@@ -7,6 +7,7 @@ var correct = 0;
 // variable that holds number of incorrect answers
 var incorrect = 0;
 
+// hoisted variable that hold the setInterval function
 var timeOut;
 
 // varialbe that holds number of unanswered questions
@@ -31,6 +32,7 @@ $("#start").click(function() {
         if(timer > 0) {
             $("#timer").text("Time Remaining: " + timer + " Seconds");
         }
+
         // once timer is 0, the ID 'game' will hide and the ID 'stats' will appear and the 'check' function will run
         else {
             clearInterval(timeOut);
@@ -65,6 +67,7 @@ $("#restart").click(function() {
         if(timer > 0) {
             $("#timer").text("Time Remaining: " + timer + " Seconds");
         }
+
         // once timer is 0, the ID 'game' will hide and the ID 'stats' will appear and the 'check' function will run
         else {
             clearInterval(timeOut);
@@ -80,7 +83,6 @@ $("#restart").click(function() {
 // if the value of a question is empty, then increase 'unanswered'
 // if either of those are false, then increase 'incorrect'
 function check() {
-
 var question1 = document.quiz.question1.value;
 var question2 = document.quiz.question2.value;
 var question3 = document.quiz.question3.value;
