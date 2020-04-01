@@ -1,4 +1,8 @@
 # TriviaGame
 https://claywhill.github.io/TriviaGame/
 
-This is the National Parks Trivia Game. In this game, the player is given 120 seconds to answer 10 multiple-choice questions that are National Park related. The game will end after the player answers all 10 questions or the timer runs out, whichever occurs first. After the game has ended, the player will be shown their number of correct, incorrect, and unanswered questions. 
+This app is a simple quiz-style trivia game that ends after all questions have been answered or the timer runs out.
+
+The app uses standard front end languages like HTML, CSS, and JavaScript(jQuery). The objective was to implement the use of an interval countdown timer.
+
+To use the app simply click the start button and attempt to answer all the question before the time runs out. An option to play again will be given after each attempt.
